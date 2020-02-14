@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { memo, useCallback } from 'react';
+import { useDispatch } from 'react-redux';
 
-export const App = () => {
+import { fetchMe } from '../store/reducers/me';
+import { Me } from './Me';
+
+const AppComponent = () => {
+  const dispatch = useDispatch();
+
+  const handleFetchMe = useCallback(() => {
+    dispatch(fetchMe());
+  }, [dispatch]);
+
   return (
     <div>
       <header>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
+        <h1>GitHub</h1>
+        <button onClick={handleFetchMe}>Fetch me</button>
+        <Me />
       </header>
     </div>
   );
 };
+
+export const App = memo(AppComponent);
