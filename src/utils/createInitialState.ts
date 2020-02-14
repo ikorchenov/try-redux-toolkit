@@ -1,4 +1,4 @@
-import { State } from '../types/store';
+import { State } from 'types/store';
 
 export const createInitialState = <T>(data?: T): State<T> => ({
   loading: false,

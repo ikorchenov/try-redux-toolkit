@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction, Draft } from '@reduxjs/toolkit';
 import { createInitialState } from './createInitialState';
-import { State } from '../types/store';
+import { State } from 'types/store';
 
 export const createApiReducer = <T>(name: string, initialData?: T) =>
   createSlice({

@@ -1,7 +1,7 @@
 import React, { memo, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
+import { fetchMe } from 'store/reducers/me';
 
-import { fetchMe } from '../store/reducers/me';
 import { Me } from './Me';
 
 const AppComponent = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../store';
+import { RootState } from 'store';
 
 const MeComponent = () => {
   const { data, loading, error } = useSelector((state: RootState) => state.me);

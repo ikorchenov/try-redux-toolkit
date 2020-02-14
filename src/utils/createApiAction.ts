@@ -1,6 +1,6 @@
 import { Dispatch } from '@reduxjs/toolkit';
 import { Request } from 'superagent';
-import { ReqActions } from '../types/store';
+import { ReqActions } from 'types/store';
 
 export const createApiAction = <P extends Request, D>(promise: P, actions: ReqActions<D>) => async (
   dispatch: Dispatch,
